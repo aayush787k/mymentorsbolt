@@ -1,4 +1,5 @@
 import { ArrowUpRight, Sparkles, Star, CalendarPlus } from 'lucide-react';
+import MetalBadge from './MetalBadge';
 
 export default function Hero({
   onApply,
@@ -109,6 +110,8 @@ export default function Hero({
               </p>
             </div>
           </div>
+
+          <MetalBadge className="pt-2" />
         </div>
 
         {/* Right visual — stacked editorial cards */}
