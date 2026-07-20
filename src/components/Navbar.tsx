@@ -14,9 +14,11 @@ const NAV = [
 export default function Navbar({
   onApply,
   onBookDemo,
+  onPortal,
 }: {
   onApply: () => void;
   onBookDemo: () => void;
+  onPortal: () => void;
 }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -89,6 +91,12 @@ export default function Navbar({
               className="px-4 py-2.5 rounded-full border border-theme-border/20 text-sm font-medium hover:bg-theme-surface transition-colors"
             >
               Book Demo
+            </button>
+            <button
+              onClick={onPortal}
+              className="px-4 py-2.5 rounded-full border border-theme-border/20 text-sm font-medium hover:bg-theme-surface transition-colors"
+            >
+              Student Login
             </button>
             <button
               onClick={onApply}
@@ -200,6 +208,15 @@ export default function Navbar({
 
           {/* Footer CTAs */}
           <div className="p-5 border-t border-theme-border/10 space-y-2.5">
+            <button
+              onClick={() => {
+                setOpen(false);
+                onPortal();
+              }}
+              className="w-full py-3 rounded-full border border-theme-border/20 font-semibold hover:bg-theme-surface transition-colors"
+            >
+              Student Login
+            </button>
             <button
               onClick={() => {
                 setOpen(false);
